@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '297697505925728');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=297697505925728&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('background.webp') no-repeat center center;
+            background-size: contain; /* La imagen se ajusta dentro del contenedor sin distorsionarse */
+            background-position: center; /* Centra la imagen */
+            background-attachment: scroll; /* La imagen no se queda fija al hacer scroll */
+            background-color: #003f5c; /* Color de fondo azulado para la parte vacía */
+            color: #ffffff;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Asegura que la altura sea 100% de la ventana */
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 70px;
+            text-align: center; /* Alinea el texto dentro del contenedor */
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 20px;
+            background: rgba(0, 13, 50, 0.8); /* Fondo semitransparente */
+            border-bottom: 3px solid #3e5c9a;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            color: #00eaff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #a1c8e8;
+            margin-bottom: 20px;
+        }
+
+        .jackpot {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            color: #ffc300;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #00eaff, #0077b6);
+            color: white;
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 234, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #00b4d8, #005f73);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 234, 255, 0.6);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            body {
+                background-size: cover; /* Cambiar a cover en pantallas pequeñas para un mejor ajuste */
+                background-color: #003f5c; /* Color de fondo azulado */
+                height: auto; /* Ajustar altura según el contenido */
+            }
+
+            .hero-title {
+                font-size: 2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1 class="hero-title">¡Comenza a jugar en SpaceGroup!</h1>
+            <p class="hero-subtitle">PROHIBIDO EL JUEGO A MENORES DE 18 AÑOS.</p>
+            <div class="jackpot">🔥 ¡CARGANDO HOY TE DAMOS $500 DE BONO! 🔥</div>
+            <a href="https://wa.link/4cstu4" target="_blank">
+                <button class="cta-button">
+                    <i class="fab fa-whatsapp"></i> ¡TE CREAMOS LA CUENTA POR WHATSAPP Y COMENZA A JUGAR!
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
