@@ -61,31 +61,37 @@
       text-align: center;
     }
 
-    /* Logo: contenedor + imagen adentro para efectos */
-    .logo {
-      width: 220px; height: 220px; margin-bottom: 28px;
-      position: relative; overflow: hidden;
-      animation: glow 2.4s ease-in-out infinite;
-    }
-    .logo::after{
-      /* brillo que cruza */
-      content:""; position:absolute; inset:-40% -100% auto auto;
-      width:70%; height:200%;
-      transform: rotate(25deg);
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
-      animation: shine 4.2s linear infinite;
-    }
-    .logo img{
-      width: 88%; height: 88%; object-fit: cover;
-      border-radius: 50%;
-      position: relative; z-index: 1;
-      background: #111;
-    }
+        .logo {
+            width: 220px;
+            height: 220px;
+            margin-bottom: 40px;
+            background: linear-gradient(145deg, #ffbc00, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            box-shadow: 0 5px 25px rgba(255,188,0,0.6);
+            animation: glow 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
 
-    @keyframes shine {
-      0% { transform: translateX(-120%) rotate(25deg); }
-      100% { transform: translateX(120%) rotate(25deg); }
-    }
     
     h1 {
       font-size: 22px;
