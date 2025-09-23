@@ -174,18 +174,18 @@
         const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
 
         // 🎯 Tracking del click
-        if (typeof fbq === "function") {
-          fbq("trackCustom", "WhatsAppClick", { destino:number, user, ref });
-        }
-        if (typeof gtag === "function") {
-          gtag("event", "whatsapp_click", {
-            event_category: "CTA",
-            event_label: "WhatsApp",
-            value: 1,
-            user: user,
-            ref: ref,
-            number: number
-          });
+if (typeof fbq === "function") {
+  fbq("track", "Lead", { destino:number, user, ref });
+}
+        
+gtag("event", "generate_lead", {
+  event_category: "engagement",
+  event_label: "WhatsApp",
+  value: 1,
+  user: user,
+  ref: ref,
+  number: number
+});
         }
 
         window.location.href = url;
