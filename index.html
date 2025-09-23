@@ -38,13 +38,31 @@
     }
     *{ box-sizing:border-box; }
     body{
-      margin:0; height:100vh;
+      margin:0; min-height:100vh;
       font-family:'Montserrat',sans-serif;
       display:flex; align-items:center; justify-content:center;
       background:linear-gradient(145deg,var(--bg1),var(--bg2),var(--bg3));
       color:var(--text);
+      text-align:center;
+      padding:20px;
     }
-    .container{ max-width:420px; width:100%; text-align:center; padding:30px; }
+    .container{ max-width:420px; width:100%; }
+
+    .logo{
+      width:200px; height:200px; margin:0 auto 30px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 0 20px rgba(255,188,0,0.6);
+      animation: glow 2s infinite alternate;
+      overflow:hidden;
+    }
+    .logo img{
+      width:90%; height:90%; object-fit:contain; border-radius:50%;
+    }
+    @keyframes glow{
+      from{ box-shadow:0 0 10px rgba(255,188,0,0.3); }
+      to{ box-shadow:0 0 30px rgba(255,188,0,0.8); }
+    }
+
     h1{ font-size:22px; margin:10px 0; }
     .verified{ color:#ffd700; font-weight:800; margin-bottom:20px; }
 
@@ -53,7 +71,7 @@
       padding:25px 20px;
       border-radius:12px;
       box-shadow:0 6px 18px rgba(0,0,0,0.4);
-      max-width:420px; margin:0 auto;
+      margin-bottom:20px;
     }
     .form-entry{ margin-bottom:18px; text-align:left; }
     .form-entry label{
@@ -81,13 +99,31 @@
       transform:translateY(-2px) scale(1.02);
       box-shadow:0 8px 20px rgba(0,0,0,0.45);
     }
+
+    .footer{ margin-top:15px; }
+    .footer p{
+      color:#efb810;
+      font-size:20px;
+      text-shadow:0 2px 12px rgba(255,188,0,0.35);
+      margin:10px 0;
+    }
+    .footer h2{
+      font-size:18px;
+      font-weight:800;
+      margin:5px 0;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Logo -->
+    <div class="logo"><img src="avatar.jpg" alt="Azar Latino"></div>
+
+    <!-- Título y verificación -->
     <h1>Envíanos un WhatsApp para crear tu cuenta</h1>
     <div class="verified">🟡 PLATAFORMA VERIFICADA ✅</div>
 
+    <!-- Formulario -->
     <div class="form-box">
       <form id="wppform">
         <div class="form-entry">
@@ -97,11 +133,18 @@
         <button type="submit" class="cta-btn">Crea tu usuario ➤</button>
       </form>
     </div>
+
+    <!-- Textos de abajo -->
+    <div class="footer">
+      <p>Con tu primer depósito te bonificamos $5.000</p>
+      <h2>Mínimo de carga $2.000</h2>
+      <h2>CARGA Y RETIRA LAS 24 HS AL INSTANTE</h2>
+    </div>
   </div>
 
   <script>
     (function(){
-      // 📱 Rotación de números (no links)
+      // 📱 Rotación de números
       const numbers = [
         "543585142963",
         "5216563558525",
@@ -136,7 +179,6 @@
         const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
 
         const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
-        // Incluimos ref también como query param (por si tu stack lo captura)
         const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
 
         // 🎯 Tracking del click
