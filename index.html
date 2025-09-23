@@ -162,18 +162,18 @@
       }
 
       const form = document.getElementById("wppform");
-      form.addEventListener("submit", function(e){
-        e.preventDefault();
-        const user = document.getElementById("user").value.trim();
-        if(!user) return;
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const user = document.getElementById("user").value.trim();
+  if(!user) return;
 
-        const number = pickNumber();
-        const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
+  const number = pickNumber();
+  const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
 
-        const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
-        const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
+  const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
+  const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
 
- // 🎯 Tracking del click
+  // 🎯 Tracking del click
   if (typeof fbq === "function") {
     fbq("track", "Lead", { destino:number, user, ref });
   }
@@ -192,7 +192,6 @@
   // Redirigir a WhatsApp
   window.location.href = url;
 });
-      
   </script>
 </body>
 </html>
