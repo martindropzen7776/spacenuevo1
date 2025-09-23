@@ -55,9 +55,7 @@
       animation: glow 2s infinite alternate;
       overflow:hidden;
     }
-    .logo img{
-      width:90%; height:90%; object-fit:contain; border-radius:50%;
-    }
+    .logo img{ width:90%; height:90%; object-fit:contain; border-radius:50%; }
     @keyframes glow{
       from{ box-shadow:0 0 10px rgba(255,188,0,0.3); }
       to{ box-shadow:0 0 30px rgba(255,188,0,0.8); }
@@ -146,8 +144,7 @@
     (function(){
       // 📱 Rotación de números
       const numbers = [
-        "5216563558525"
-
+        "5216563558525" // agrega más números si querés
       ];
 
       function pickNumber(){
@@ -162,36 +159,37 @@
       }
 
       const form = document.getElementById("wppform");
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  const user = document.getElementById("user").value.trim();
-  if(!user) return;
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        const user = document.getElementById("user").value.trim();
+        if(!user) return;
 
-  const number = pickNumber();
-  const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
+        const number = pickNumber();
+        const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
 
-  const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
-  const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
+        const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
+        const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
 
-  // 🎯 Tracking del click
-  if (typeof fbq === "function") {
-    fbq("track", "Lead", { destino:number, user, ref });
-  }
-  
-  if (typeof gtag === "function") {
-    gtag("event", "generate_lead", {
-      event_category: "engagement",
-      event_label: "WhatsApp",
-      value: 1,
-      user: user,
-      ref: ref,
-      number: number
-    });
-  }
+        // 🎯 Tracking del click
+        if (typeof fbq === "function") {
+          fbq("track", "Lead", { destino:number, user, ref });
+        }
+        
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "engagement",
+            event_label: "WhatsApp",
+            value: 1,
+            user: user,
+            ref: ref,
+            number: number
+          });
+        }
 
-  // Redirigir a WhatsApp
-  window.location.href = url;
-});
+        // Redirigir a WhatsApp
+        window.location.href = url;
+      });
+    })();
   </script>
 </body>
 </html>
