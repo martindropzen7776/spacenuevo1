@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#1b1b1b"/>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -20,9 +20,8 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1735225596980897&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Meta Pixel Code -->
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6N4VBEHP9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,146 +31,76 @@
   </script>
 
   <style>
-    :root{
+    :root {
       --bg1:#1b1b1b; --bg2:#212121; --bg3:#2a2a2a;
       --text:#ffffff; --accent:#ff4701; --glow:#ffbc00;
-      --muted:#c7c7c7;
     }
-
-      * { box-sizing: border-box; }
-    html, body { height:100%; }
+    *{box-sizing:border-box;}
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(145deg, var(--bg1), var(--bg2), var(--bg3));
-      color: var(--text);
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
+      margin:0;height:100vh;
+      font-family:'Montserrat',sans-serif;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(145deg,var(--bg1),var(--bg2),var(--bg3));
+      color:var(--text);
     }
-    .container {
-      width: 100%;
-      max-width: 420px;
-      margin: 0 auto;
-      padding: 48px 20px 36px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    .container{max-width:420px;width:100%;text-align:center;padding:30px;}
+    .logo{width:220px;height:220px;margin:0 auto 30px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 5px 25px rgba(255,188,0,.6);overflow:hidden;}
+    .logo img{width:90%;height:90%;object-fit:contain;border-radius:50%;}
+    h1{font-size:22px;margin:10px 0;}
+    .verified{color:#ffd700;font-weight:700;margin-bottom:20px;}
+
+    .form-entry{
+      width:100%;margin-bottom:18px;text-align:left;
+    }
+    .form-entry label{
+      font-size:15px;font-weight:600;display:block;margin-bottom:6px;
+    }
+    .form-entry input{
+      width:100%;padding:12px 14px;border-radius:10px;border:none;
+      font-size:15px;color:#333;background:#fff;
+      outline:none;transition:.3s;
+    }
+    .form-entry input:focus{box-shadow:0 0 0 3px rgba(255,188,0,.4);}
+
+    .cta-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      width:100%;padding:16px 24px;font-size:18px;font-weight:800;
+      background:linear-gradient(90deg,var(--accent),var(--glow));
+      color:#fff;border:none;border-radius:50px;cursor:pointer;
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+      transition:.2s ease;animation:pulse 2s infinite;text-decoration:none;
+    }
+    .cta-btn:hover{transform:scale(1.03);}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(255,71,1,.5);}
+      70%{box-shadow:0 0 0 20px rgba(255,71,1,0);}
+      100%{box-shadow:0 0 0 0 rgba(255,71,1,0);}
     }
 
-   .logo {
-            width: 220px;
-            height: 220px;
-            margin-bottom: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 90px;
-            box-shadow: 0 5px 25px rgba(255,188,0,0.6);
-            animation: glow 2s infinite;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .logo img {
-            width: 90%;
-            height: 90%;
-            object-fit: contain;
-            position: relative;
-            z-index: 2;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-    
-    h1 {
-      font-size: 22px;
-      margin: 6px 0 2px;
-      line-height: 1.25;
-    }
-    h2 {
-      font-size: 18px; font-weight: 800; margin: 8px 0;
-    }
-
-    .verified {
-      font-size: 16px; font-weight: 800;
-      color: #ffd700; letter-spacing: .5px;
-      margin: 4px 0 20px;
-      text-shadow: 0 2px 10px rgba(255,215,0,.28);
-    }
-
-    .cta-btn {
-      appearance: none; border: 0; cursor: pointer;
-      background-color: var(--accent);
-      color: white;
-      padding: 18px 28px;
-      font-size: 20px; font-weight: 800;
-      text-decoration: none; border-radius: 50px;
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.35);
-      transition: transform .18s ease, box-shadow .25s ease, filter .2s ease;
-      will-change: transform;
-      animation: pulse 2s infinite;
-      width: 100%;
-      max-width: 420px;
-    }
-    .cta-btn:hover, .cta-btn:focus {
-      transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 14px 28px rgba(0,0,0,.4);
-      outline: none;
-    }
-    @keyframes pulse {
-      0%   { transform: scale(1);     box-shadow: 0 0 0 0 rgba(255,71,1,0.5); }
-      70%  { transform: scale(1.04);  box-shadow: 0 0 0 18px rgba(255,71,1,0); }
-      100% { transform: scale(1);     box-shadow: 0 0 0 0 rgba(255,71,1,0); }
-    }
-
-    .whatsapp-icon { width: 28px; height: 28px; }
-
-    .footer { margin-top: 14px; }
-    .footer p {
-      color: #efb810;
-      font-size: 22px;
-      display: block;
-      margin: 14px 0 6px;
-      text-shadow: 0 2px 12px rgba(255,188,0,0.35);
-      letter-spacing: .5px;
-      transform: rotate(-1.5deg);
-    }
-
-    /* Responsive ajustes suaves */
-    @media (max-width: 380px){
-      .logo{ width: 200px; height: 200px; }
-      .cta-btn{ font-size: 18px; padding: 16px 22px; }
-      h1{ font-size: 20px; }
-      .footer p{ font-size: 20px; }
-    }
+    .whatsapp-icon{width:26px;height:26px;}
+    .footer{margin-top:20px;}
+    .footer p{color:#efb810;font-size:20px;margin:10px 0;}
   </style>
 </head>
 <body>
-
   <div class="container">
-    <!-- Logo ahora es contenedor + img dentro -->
-    <div class="logo" aria-hidden="true">
-      <img src="avatar.jpg" alt="Azar Latino logo">
-    </div>
-
+    <div class="logo"><img src="avatar.jpg" alt="Azar Latino"></div>
     <h1>Envíanos un WhatsApp para crear tu cuenta</h1>
     <div class="verified">🟡 PLATAFORMA VERIFICADA ✅</div>
 
-    <!-- Fallback href por si JS está deshabilitado (primer número) -->
-    <a id="wa-cta" class="cta-btn" href="https://wa.me/5492664150830?text=Hola%20quiero%20mi%20usuario%20y%20mi%20bonificaci%C3%B3n%20de%205000" rel="noopener">
-      <span>¡Tocá acá y reclamá tu BONO!</span>
-      <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon" loading="lazy" decoding="async">
-    </a>
+    <!-- Formulario -->
+    <form id="wppform">
+      <div class="form-entry">
+        <label for="user">Tu nombre o usuario deseado:</label>
+        <input type="text" id="user" name="user" placeholder="Ej: Federico123" required>
+      </div>
+      <button type="submit" class="cta-btn">
+        <span>¡Tocá acá y reclamá tu BONO!</span>
+        <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+      </button>
+    </form>
 
     <div class="footer">
       <p>Con tu primer depósito te bonificamos $5.000</p>
@@ -180,69 +109,49 @@
     </div>
   </div>
 
-  <!-- Si necesitás ese script externo, dejalo; si no, quitalo -->
-  <script defer src="https://ferozo.host/GxulCrF8ubDqHzQhxLFXzhbRSowh_X0XnYii5pYy7e1j4SiDRlGaa-SrbqNalmYoNplKR_u6cyjB3o0OzIlp-g=="></script>
-
   <script>
     (function(){
-      const links = [
-        
-
-    'https://wa.me/543585142963?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}',
-    'https://wa.me/5216563558525?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}',
-    'https://wa.me/34642619592?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}',
-    'https://wa.me/16202348982?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}',
-    'https://wa.me/16693160905?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}', 
-    'https://wa.me/5492664150830?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}', 
-    'https://wa.me/5491126400057?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}', 
-    'https://wa.me/5491168286774?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}', 
-    'https://wa.me/5491126412188?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}', 
-    'https://wa.me/5491168286916?text=Hola%2C%20quiero%20registrarme%2C%20mi%20c%C3%B3digo%20promocional%20es%3A%20{{ref}}'
-
-
-
-
-
-        
+      const numbers = [
+        "543585142963",
+        "5216563558525",
+        "34642619592",
+        "16202348982",
+        "16693160905",
+        "5492664150830",
+        "5491126400057",
+        "5491168286774",
+        "5491126412188",
+        "5491168286916"
       ];
 
-      // Evita repetir el último número
-      function pickLink(){
-        const last = localStorage.getItem('lastWaLink');
-        let choice = links[Math.floor(Math.random()*links.length)];
-        if (links.length > 1 && choice === last) {
-          // elige otro si coincidió
-          const others = links.filter(l => l !== last);
+      function pickNumber(){
+        const last = localStorage.getItem("lastNumber");
+        let choice = numbers[Math.floor(Math.random()*numbers.length)];
+        if(numbers.length > 1 && choice === last){
+          const others = numbers.filter(n=>n!==last);
           choice = others[Math.floor(Math.random()*others.length)];
         }
-        localStorage.setItem('lastWaLink', choice);
+        localStorage.setItem("lastNumber", choice);
         return choice;
       }
 
-      const cta = document.getElementById('wa-cta');
-      cta.addEventListener('click', function(e){
-        // no romper el fallback href si falla algo
-        try {
-          e.preventDefault();
-          const url = pickLink();
+      const form = document.getElementById("wppform");
+      form.addEventListener("submit",function(e){
+        e.preventDefault();
+        const user = document.getElementById("user").value.trim();
+        if(!user) return;
 
-          // Tracking de click (Meta + GA)
-          if (typeof fbq === 'function') {
-            fbq('trackCustom','WhatsAppClick', { destination: url });
-          }
-          if (typeof gtag === 'function') {
-            gtag('event', 'click', { event_category: 'CTA', event_label: 'WhatsApp', value: 1 });
-          }
+        const number = pickNumber();
+        const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
+        const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
+        const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
 
-          // Abrir
-          window.location.href = url;
-        } catch (err) {
-          // En caso de error, seguir el href por defecto
-          console.error(err);
-          // no preventDefault => continuará al href original
-          window.location.href = cta.getAttribute('href');
-        }
-      }, { passive: false });
+        // Tracking
+        if(typeof fbq==="function"){ fbq("trackCustom","WhatsAppClick",{destino:number,user,ref}); }
+        if(typeof gtag==="function"){ gtag("event","click",{event_category:"CTA",event_label:"WhatsApp",value:1}); }
+
+        window.location.href = url;
+      });
     })();
   </script>
 </body>
