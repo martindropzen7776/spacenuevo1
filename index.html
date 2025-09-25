@@ -2,194 +2,178 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Azar Latino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Lion Play</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#1b1b1b"/>
 
-  <!-- 🟣 Meta Pixel -->
+  <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1735225596980897');
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1378429319722640'); // tu Pixel ID
+  fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1735225596980897&ev=PageView&noscript=1"/>
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1378429319722640&ev=PageView&noscript=1"
+  /></noscript>
 
-  <!-- 🔵 Google tag (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6N4VBEHP9"></script>
+  <!-- Google tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FVBYC2QE1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-X6N4VBEHP9');
+    gtag('config', 'G-2FVBYC2QE1');
   </script>
 
   <style>
-    :root{
-      --bg1:#1b1b1b; --bg2:#212121; --bg3:#2a2a2a;
-      --text:#ffffff; --accent:#ff4701; --glow:#ffbc00;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a40 40%, #6a1b9a 70%, #b8860b 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0; min-height:100vh;
-      font-family:'Montserrat',sans-serif;
-      display:flex; align-items:center; justify-content:center;
-      background:linear-gradient(145deg,var(--bg1),var(--bg2),var(--bg3));
-      color:var(--text);
-      text-align:center;
-      padding:20px;
+    .container {
+      max-width: 420px;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 45px 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
     }
-    .container{ max-width:420px; width:100%; }
-
-    .logo{
-      width:200px; height:200px; margin:0 auto 30px;
-      border-radius:50%; display:flex; align-items:center; justify-content:center;
-      box-shadow:0 0 20px rgba(255,188,0,0.6);
-      animation: glow 2s infinite alternate;
-      overflow:hidden;
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #FFD700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
     }
-    .logo img{ width:90%; height:90%; object-fit:contain; border-radius:50%; }
-    @keyframes glow{
-      from{ box-shadow:0 0 10px rgba(255,188,0,0.3); }
-      to{ box-shadow:0 0 30px rgba(255,188,0,0.8); }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-
-    h1{ font-size:22px; margin:10px 0; }
-    .verified{ color:#ffd700; font-weight:800; margin-bottom:20px; }
-
-    .form-box{
-      background:rgba(255,255,255,0.05);
-      padding:25px 20px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.4);
-      margin-bottom:20px;
+    .cta-btn {
+      background-color: #000;
+      color: #FFD700;
+      padding: 20px 38px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      animation: pulse 2s infinite;
     }
-    .form-entry{ margin-bottom:18px; text-align:left; }
-    .form-entry label{
-      font-size:15px; font-weight:600; display:block; margin-bottom:6px;
-      color:#ffbc00;
+    .cta-btn:hover {
+      background-color: #FFD700;
+      color: #000;
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 1);
     }
-    .form-entry input{
-      width:100%; padding:12px 14px; border-radius:8px;
-      border:2px solid transparent; font-size:15px; color:#333; background:#fff;
-      outline:none; transition:all .3s;
+    .whatsapp-icon {
+      width: 32px;
+      height: 32px;
     }
-    .form-entry input:focus{
-      border-color:var(--accent);
-      box-shadow:0 0 0 3px rgba(255,71,1,0.25);
+    .footer {
+      margin-top: 35px;
+      font-size: 18px;
     }
-
-    .cta-btn{
-      width:100%; padding:15px 20px; font-size:16px; font-weight:800;
-      color:#fff; background:linear-gradient(90deg,var(--accent),var(--glow));
-      border:none; border-radius:50px; cursor:pointer;
-      box-shadow:0 6px 16px rgba(0,0,0,0.3);
-      transition:all .3s ease; text-transform:uppercase;
+    .footer p {
+      margin: 8px 0;
+      color: #eee;
     }
-    .cta-btn:hover{
-      transform:translateY(-2px) scale(1.02);
-      box-shadow:0 8px 20px rgba(0,0,0,0.45);
+    .footer p:first-child {
+      font-weight: bold;
+      color: #FFD700;
+      font-size: 20px;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     }
-
-    .footer{ margin-top:15px; }
-    .footer p{
-      color:#efb810;
-      font-size:20px;
-      text-shadow:0 2px 12px rgba(255,188,0,0.35);
-      margin:10px 0;
-    }
-    .footer h2{
-      font-size:18px;
-      font-weight:800;
-      margin:5px 0;
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.8); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 215, 0, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Logo -->
-    <div class="logo"><img src="avatar.jpg" alt="Azar Latino"></div>
+    <img src="avatar.jpeg" alt="Avatar" class="avatar">
+    <h1>ENVIANOS UN WHATSAPP PARA CREAR TU CUENTA</h1>
 
-    <!-- Título y verificación -->
-    <h1>Envíanos un WhatsApp para crear tu cuenta</h1>
-    <div class="verified">🟡 PLATAFORMA VERIFICADA ✅</div>
+    <a href="#" class="cta-btn" onclick="openRandomLink()">
+      <span>¡QUIERO MI BONO!</span>
+      <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
-    <!-- Formulario -->
-    <div class="form-box">
-      <form id="wppform">
-        <div class="form-entry">
-          <label for="user">Usuario Deseado<span>*</span>:</label>
-          <input type="text" id="user" name="user" placeholder="Ej: Juanperez" required>
-        </div>
-        <button type="submit" class="cta-btn">Crea tu usuario ➤</button>
-      </form>
-    </div>
-
-    <!-- Textos de abajo -->
     <div class="footer">
-      <p>Con tu primer depósito te bonificamos $5.000</p>
-      <h2>Mínimo de carga $2.000</h2>
-      <h2>CARGA Y RETIRA LAS 24 HS AL INSTANTE</h2>
+      <p>30% DE BONUS EN TU PRIMERA CARGA!!</p>
+      <p>Mínimo de Carga $2000</p>
+      <p>Ruleta en Vivo · Slots · Apuestas Deportivas y más</p>
     </div>
   </div>
 
-  <script>
-    (function(){
-      // 📱 Rotación de números
-      const numbers = [
-        "5216563558525" // agrega más números si querés
-      ];
+<script>
+  function pickNumber() {
+    const numbers = [
+      '5492664151120',
+      '5492664308320',
+      '5492664308396',
+      '5492664308321'
+    ];
+    return numbers[Math.floor(Math.random() * numbers.length)];
+  }
 
-      function pickNumber(){
-        const last = localStorage.getItem("lastNumber");
-        let choice = numbers[Math.floor(Math.random()*numbers.length)];
-        if(numbers.length > 1 && choice === last){
-          const others = numbers.filter(n => n !== last);
-          choice = others[Math.floor(Math.random()*others.length)];
-        }
-        localStorage.setItem("lastNumber", choice);
-        return choice;
-      }
+  function openRandomLink() {
+    const number = pickNumber();
+    const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
+    const user = "usuario_demo"; // ⚡️ si querés, acá se puede capturar un input de usuario
 
-      const form = document.getElementById("wppform");
-      form.addEventListener("submit", function(e){
-        e.preventDefault();
-        const user = document.getElementById("user").value.trim();
-        if(!user) return;
+    const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
 
-        const number = pickNumber();
-        const ref = "LD_" + Math.random().toString(36).substring(2,8).toUpperCase();
+    // 🎯 Tracking en Meta Pixel
+    if (typeof fbq === "function") {
+      fbq("track", "Lead", { destino:number, user, ref });
+    }
 
-        const msg = `Hola, quiero registrarme.\nMi usuario deseado es: ${user}\nMi código promocional es: ${ref}`;
-        const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}&ref=${encodeURIComponent(ref)}`;
-
-        // 🎯 Tracking del click
-        if (typeof fbq === "function") {
-          fbq("track", "Lead", { destino:number, user, ref });
-        }
-        
-        if (typeof gtag === "function") {
-          gtag("event", "generate_lead", {
-            event_category: "engagement",
-            event_label: "WhatsApp",
-            value: 1,
-            user: user,
-            ref: ref,
-            number: number
-          });
-        }
-
-        // Redirigir a WhatsApp
-        window.location.href = url;
+    // 🎯 Tracking en GA4
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", {
+        event_category: "engagement",
+        event_label: "WhatsApp",
+        value: 1,
+        user: user,
+        ref: ref,
+        number: number
       });
-    })();
-  </script>
+    }
+
+    window.location.href = url;
+  }
+</script>
 </body>
 </html>
